@@ -1,5 +1,7 @@
 'use strict';
 
+const { hashPassword } = require("../helpers/passwordHandler");
+
 module.exports = {
   async up (queryInterface, Sequelize) {
     /**
@@ -16,7 +18,7 @@ module.exports = {
       {
         username: 'alexgoz',
         email: 'alex@mail.com',
-        password: '11223344',
+        password: hashPassword('11223344'),
         role: 'admin',
         createdAt: new Date(),
         updatedAt: new Date()
@@ -24,12 +26,12 @@ module.exports = {
       {
         username: 'godjirah',
         email: 'admin@admin.com',
-        password: '33445566',
+        password: hashPassword('33445566'),
         role: 'user',
         createdAt: new Date(),
         updatedAt: new Date()
       }
-    ])
+    ], {})
   },
 
   async down (queryInterface, Sequelize) {

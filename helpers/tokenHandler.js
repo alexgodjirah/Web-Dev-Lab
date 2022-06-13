@@ -15,15 +15,17 @@ const verifyToken = async (payload) => {
 
 
 // Test:
-const user = {
-    id: 1,
-    username: 'admin',
-    email: 'admin@admin.com'
-}
+// const user = {
+//     id: 1,
+//     username: 'admin',
+//     email: 'admin@admin.com'
+// }
 
-generateToken(user).then(token => {
-    console.log(token);
-    verifyToken(token).then(data => {
-        console.log(data);
-    })
-})
+// generateToken(user).then(token => {
+//     console.log(token);
+//     verifyToken(token).then(data => {
+//         console.log(data);
+//     })
+// })
+
+module.exports = { generateToken, verifyToken }
