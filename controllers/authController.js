@@ -71,7 +71,7 @@ class AuthController {
 
     static delete = async (req, res) => {
         try {
-            const { id } = req.params;
+            const { id } = req.user.id;
 
             const deleteUser = await User.destroy({ where: { id: id } });
             if (deleteUser) res.status(410).json('Deleted');

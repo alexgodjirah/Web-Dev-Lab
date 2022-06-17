@@ -5,7 +5,7 @@ const { generateToken, verifyToken } = require('../helpers/tokenHandler');
 class UpdateController {
     static updateUsername = async (req, res) => {
         try {
-            const { id } = req.params;
+            const { id } = req.user.id;
             const { username } = req.body;
     
             const userPayload = {
@@ -26,7 +26,7 @@ class UpdateController {
     
     static updateEmail = async (req, res) => {
         try {
-            const { id } = req.params;
+            const { id } = req.user.id;
             const { email } = req.body;
 
             const emailPayload = {
@@ -46,7 +46,7 @@ class UpdateController {
 
     static updatePassword = async (req, res) => {
         try {
-            const { id } = req.params;
+            const { id } = req.user.id;
             const { password } = req.body;
 
             const passwordPayload = {
@@ -66,7 +66,7 @@ class UpdateController {
 
     static updateRole = async (req, res) => {
         try {
-            const { id } = req.params;
+            const { id } = req.user.id;
             const { role } = req.body;
 
             const rolePayload = {
