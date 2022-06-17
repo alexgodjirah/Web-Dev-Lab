@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const secret_key = process.env.SECRET_KEY
 
 const generateToken = async (payload) => {
-    return await jwt.sign(payload, secret_key, { expiresIn: '1d' });
+    return await jwt.sign(payload, secret_key, { expiresIn: '7d' });
 }
 
 const verifyToken = async (payload) => {

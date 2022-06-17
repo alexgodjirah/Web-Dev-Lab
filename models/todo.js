@@ -11,7 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Todo.belongsTo(models.Users);
+      Todo.belongsTo(models.User, {
+        foreignKey: 'UserId',
+        onDelete: 'CASCADE'
+      });
     }
   }
   Todo.init({
