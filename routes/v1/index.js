@@ -1,5 +1,5 @@
-const todoRouter = require('./todos');
-const userRouter = require('./users');
+const todoRouter = require('./todo');
+const userRouter = require('./user');
 
 const v1 = require('express').Router();
 
