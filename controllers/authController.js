@@ -24,7 +24,6 @@ class AuthController {
             const createUser = await User.create(userPayload);
             if (createUser) {
                 res.status(201).json({ message: 'User is created'});
-                res.redirect('/')
             } else {
                 res.status(400).json({ message: 'Bad request' });
             }
@@ -36,9 +35,9 @@ class AuthController {
                 role: createUser.role
             });
     
-            res.cookie('access_token', access_token, {
-                httpOnly: true
-            });
+            // res.cookie('access_token', access_token, {
+            //     httpOnly: true
+            // });
         } catch (error) {
             console.log(error);
         }
@@ -64,7 +63,6 @@ class AuthController {
                 httpOnly: true
             });
 
-            res.redirect('/');
             return res.status(200).json({ message: 'Welcome' });
         } catch (error) {
             console.log(error);
