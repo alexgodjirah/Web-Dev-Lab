@@ -5,7 +5,7 @@ const { generateToken } = require('../helpers/tokenHandler');
 class AuthController {
     static register = async (req, res) => {
         try {
-            const { username, email, password, role } = req.body;
+            const { username, email, password, confirm_password, role } = req.body;
     
             const isEmailExist = await User.findOne({ where: { email: email } });
             if (isEmailExist) res.status(409).json({ message: 'Email is not available' });
@@ -13,27 +13,33 @@ class AuthController {
             const isUsernameExist = await User.findOne({ where: { username: username } });
             if (isUsernameExist) res.status(409).json({ message: 'Usermame is not available' });
     
-            const userPayload = {
-                username: username,
-                email: email,
-                password: hashPassword(password),
-                role: role
-            };
-    
-            // create() method is a combination of build() --which used to create an instance-- and save() --which used to save or upload the instance to the databse-- methods.
-            const createUser = await User.create(userPayload);
-            if (createUser) {
-                res.status(201).json({ message: 'User is created'});
+            if (password !== confirm_password) {
+                res.status(406).json('Password do not match')
+                return false;
             } else {
-                res.status(400).json({ message: 'Bad request' });
+                const userPayload = {
+                    username: username,
+                    email: email,
+                    password: hashPassword(password),
+                    role: role
+                };
+        
+                // create() method is a combination of build() --which used to create an instance-- and save() --which used to save or upload the instance to the databse-- methods.
+                const createUser = await User.create(userPayload);
+                if (createUser) {
+                    res.status(201).json({ message: 'User is created'});
+                } else {
+                    res.status(400).json({ message: 'Bad request' });
+                }
+        
+                // Cookies
+                const access_token = await generateToken({
+                    id: createUser.id,
+                    username: createUser.username,
+                    role: createUser.role
+                });
             }
-    
-            // Cookies
-            const access_token = await generateToken({
-                id: createUser.id,
-                username: createUser.username,
-                role: createUser.role
-            });
+
     
             // res.cookie('access_token', access_token, {
             //     httpOnly: true
@@ -49,7 +55,7 @@ class AuthController {
 
             const loginUser = await User.findOne({ where: {username: username} });
 
-            const isPasswordMatch = await verifyPassword(password, loginUser.password);
+            const isPasswordMatch = verifyPassword(password, loginUser.password);
             if (!isPasswordMatch) {return res.status(409).json({ message: 'Wrong password' })};
 
             // Cookie

@@ -1,3 +1,5 @@
+const AuthController = require('../../controllers/authController');
+const authentication = require('../../middlewares/authentication.middleware');
 const todoRouter = require('./todo');
 const userRouter = require('./user');
 
@@ -7,6 +9,9 @@ v1.get('/', async(req, res) => {
     await res.json('hello from api/v1')
 })
 
+v1.post('/register', AuthController.register);
+v1.post('/login', AuthController.login);
+v1.use(authentication);
 v1.use('/user', userRouter);
 v1.use('/todo', todoRouter);
 
