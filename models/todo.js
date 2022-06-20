@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    date: DataTypes.DATE,
+    date: DataTypes.DATEONLY,
     status: {
       type: DataTypes.ENUM,
       values: ['On Progress', 'Complete', 'To Do', ''],

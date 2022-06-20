@@ -80,7 +80,7 @@ class AuthController {
             const { id } = req.user.id;
 
             const deleteUser = await User.destroy({ where: { id: id } });
-            if (deleteUser) res.status(410).json('Deleted');
+            if (deleteUser) res.status(200).json('User Deleted');
         } catch (error) {
             console.log(error);
         }

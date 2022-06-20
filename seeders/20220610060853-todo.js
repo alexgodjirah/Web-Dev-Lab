@@ -15,7 +15,7 @@ module.exports = {
     await queryInterface.bulkInsert('Todos', [
       {
         title: 'Add new user',
-        date: new Date(),
+        date: '2022-06-1',
         status: 'Complete',
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -23,7 +23,7 @@ module.exports = {
       },
       {
         title: 'Update some coding',
-        date: new Date(),
+        date: '2022-06-12',
         status: 'On Progress',
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -31,7 +31,7 @@ module.exports = {
       }, 
       {
         title: 'Read a Book',
-        date: new Date(),
+        date: '2022-06-13',
         status: 'To Do', 
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -39,7 +39,7 @@ module.exports = {
       }, 
       {
         title: 'Read some Web',
-        date: new Date(),
+        date: '2022-06-11',
         status: 'On Progress',
         createdAt: new Date(),
         updatedAt: new Date(),

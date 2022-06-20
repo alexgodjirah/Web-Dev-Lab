@@ -8,7 +8,7 @@
     "start": "nodemon server.js",
     "migrate": "npx sequelize db:migrate",
     "undoMigrate": "npx sequelize db:migrate:undo:all",
-    "seed": "npx sequelize db:seed",
+    "seed": "npx sequelize db:seed:all",
     "undoSeed": "npx sequelize db:seed:undo:all"
   },
   "repository": {
