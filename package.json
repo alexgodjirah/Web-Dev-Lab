@@ -4,7 +4,11 @@
   "description": "This repo will be used as lab for my Web Dev porfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js",
+    "migrate": "npx sequelize db:migrate",
+    "unmigrate": "npx sequelize db:migrate:undo:all",
+    "seed": "npx sequelize db:seed:all",
+    "unseed": "npx sequelize db:seed:undo:all"
   },
   "repository": {
     "type": "git",
