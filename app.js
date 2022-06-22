@@ -1,6 +1,6 @@
 const express = require('express');
-const app = express.Router();
-
+const app = express();
+const routes = require('./routes');
 
 // Utilities
 const cors = require('cors');
@@ -13,5 +13,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Routes
+app.use(routes);
 
 module.exports = app;
