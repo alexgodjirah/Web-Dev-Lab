@@ -26,11 +26,11 @@ class AuthController {
         
                 // create() method is a combination of build() --which used to create an instance-- and save() --which used to save or upload the instance to the databse-- methods.
                 const createUser = await User.create(userPayload);
-                if (createUser) {
-                    res.status(201).json({ message: 'User is created'});
-                } else {
-                    res.status(400).json({ message: 'Bad request' });
-                }
+                // if (createUser) {
+                //     res.status(201).json({ message: 'User is created'});
+                // } else {
+                //     res.status(400).json({ message: 'Bad request' });
+                // }
         
                 // Cookies
                 const access_token = await generateToken({
@@ -38,12 +38,18 @@ class AuthController {
                     username: createUser.username,
                     role: createUser.role
                 });
+                
+                res.cookie('id', createUser.id, {
+                    httpOnly: true
+                })
+                
+                res.cookie('access_token', access_token, {
+                    httpOnly: true
+                });
+    
+                return res.status(201).json({ message: `User is Created, ${access_token}` });
             }
 
-    
-            // res.cookie('access_token', access_token, {
-            //     httpOnly: true
-            // });
         } catch (error) {
             console.log(error);
         }
@@ -61,15 +67,19 @@ class AuthController {
             // Cookie
             const access_token = await generateToken({
                 id: loginUser.id,
-                username: loginUser.loginUser,
+                username: loginUser.username,
                 role: loginUser.role
             });
+
+            res.cookie('id', loginUser.id, {
+                httpOnly: true
+            })
 
             res.cookie('access_token', access_token, {
                 httpOnly: true
             });
 
-            return res.status(200).json({ message: 'Welcome' });
+            return res.status(200).json({ message: `Welcome, ${access_token}` });
         } catch (error) {
             console.log(error);
         }

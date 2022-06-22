@@ -1,5 +1,5 @@
 const AuthController = require('../../controllers/authController');
-const authentication = require('../../middlewares/authentication.middleware');
+const { authentication } = require('../../middlewares/authentication');
 const todoRouter = require('./todo');
 const userRouter = require('./user');
 

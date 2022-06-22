@@ -28,7 +28,7 @@ class TodoController {
 
     static delete = async (req, res) => {
         try {
-            const { id } = req.params;
+            const { id } = req.user.id;
             
             const deleteTodo = await Todo.destroy({ where: { id } });
             if (deleteTodo) {
@@ -39,3 +39,5 @@ class TodoController {
         }
     }
 }
+
+module.exports = TodoController;

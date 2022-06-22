@@ -3,12 +3,12 @@ require('dotenv').config({ path: '../.env' });
 const bcrypt = require('bcrypt');
 const salt = Number(process.env.salt);
 
-const hashPassword = (password) => {
-    return bcrypt.hashSync(password, salt);
+const hashPassword = async (password) => {
+    return await bcrypt.hashSync(password, salt);
 }
 
-const verifyPassword = (password, hashedPassword) => {
-    return bcrypt.compareSync(password, hashedPassword);
+const verifyPassword = async (password, hashedPassword) => {
+    return await bcrypt.compareSync(password, hashedPassword);
 }
 
 
@@ -18,7 +18,7 @@ const verifyPassword = (password, hashedPassword) => {
 // hashPassword('11223344').then(hashPassword => {
 //     console.log(hashPassword);
 //     password = hashPassword
-//     verifyPassword('12233', password).then(hashedPassword => {
+//     verifyPassword('11223344', password).then(hashedPassword => {
 //         console.log(hashedPassword)
 //     })
 // })

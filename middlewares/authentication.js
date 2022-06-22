@@ -1,29 +1,30 @@
 const { User } = require('../models');
 const { verifyToken } = require('../helpers/tokenHandler');
 
-const authorization = async (req, res, next) => {
+const authentication = async (req, res, next) => {
     try {
         const { access_token } = req.cookies;
-        if (access_token) {
-            const decodeData = await verifyToken(access_token);
+        
+        const decodeData = await verifyToken(access_token);
 
-            const findUser = await User.findOne({
+        if (access_token) {
+            
+            const findUser = await User.findOne({ 
                 where: {
                     id: decodeData.id
                 }
             });
+            // if (!findUser) res.status(404).json({ message: 'User no found' });
             
             req.user = decodeData;
 
-            if (req.user.role === 'user') {
-                res.json('You are not supposed to be here, homie');
-            }
+            next();
         } else {
             res.status(404).json({ message: 'Access Token is invalid' });
         }
     } catch (error) {
-        console.log(error);
+        next(error);
     }
-}
+};
 
-module.exports = authorization;
+module.exports = { authentication };
