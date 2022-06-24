@@ -8,7 +8,7 @@ const generateToken = async (payload) => {
 }
 
 const verifyToken = async (payload) => {
-    return await jwt.verify(payload, secret_key, { complete: true })
+    return await jwt.verify(payload, secret_key)
 }
 
 
