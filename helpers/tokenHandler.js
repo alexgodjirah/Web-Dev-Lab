@@ -25,3 +25,5 @@ const verifyToken = async (payload) => {
 //         console.log(a)
 //     })
 // })
+
+module.exports = {generateToken, verifyToken};
