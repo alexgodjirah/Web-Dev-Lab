@@ -7,6 +7,7 @@ const generateToken = async (payload) => {
     return await jwt.sign(payload, secret_key, { expiresIn: '7d' });
 }
 
+// { complete: true } in JWT return the complete aspects of a token
 const verifyToken = async (payload) => {
     return await jwt.verify(payload, secret_key)
 }
