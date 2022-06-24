@@ -10,7 +10,7 @@ const generateToken = async (payload) => {
 }
 
 const verifyToken = async (payload) => {
-    return jwt.verify(payload, secret_key, { complete: true })
+    return jwt.verify(payload, secret_key)
 }
 
 
