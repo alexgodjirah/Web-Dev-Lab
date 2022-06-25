@@ -70,6 +70,17 @@ class AuthController {
             console.log(error);
         }
     }
+
+    static delete = async (req, res) => {
+        try {
+            const { id } = req.user.id;
+
+            const deleteUser = await User.destroy({ where: {id} });
+            if (deleteUser) return res.status(200).json({ message: 'User is deleted' });
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }
 
 module.exports = AuthController;
