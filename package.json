@@ -1,0 +1,38 @@
+{
+  "name": "web-dev-lab",
+  "version": "1.0.0",
+  "description": "This repo will be used as lab for my Web Dev porfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "migrate": "npx sequelize db:migrate",
+    "unmigrate": "npx sequelize db:migrate:undo:all",
+    "seed": "npx sequelize db:seed:all",
+    "unseed": "npx sequelize db:seed:undo:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexgodjirah/Web-Dev-Lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexgodjirah/Web-Dev-Lab/issues"
+  },
+  "homepage": "https://github.com/alexgodjirah/Web-Dev-Lab#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
+  }
+}
