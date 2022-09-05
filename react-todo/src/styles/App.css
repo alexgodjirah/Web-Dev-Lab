@@ -1,0 +1,50 @@
+.body {
+  display: grid;
+
+  width: 100vw;
+  height: 100vh;
+  
+  grid-template-columns: 25% 50% 25%;
+
+  box-sizing: border-box;
+
+  justify-content: center;
+  justify-items: center;
+}
+
+.todoList {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.todoElement1 {
+  display: flex;
+
+  width: 400px;
+  /* height: 100px; */
+
+  /* gap: 20px; */
+}
+
+.todoElement2 {
+  display: flex;
+
+  width: 400px;
+  /* height: 100px; */
+
+  /* gap: 20px; */
+  text-decoration-line: line-through;
+  text-decoration-color: red;
+}
+
+.taskButton {
+  margin-left: auto;
+
+  width: 100px;
+  height: 20px;
+  
+  align-self: center;
+}

@@ -1,0 +1,13 @@
+nav {
+    display: flex;
+}
+
+
+.end {
+    display: flex;
+    margin-left: auto;
+
+    align-items: center;
+
+    gap: 10px;
+}
