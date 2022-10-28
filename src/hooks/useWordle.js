@@ -10,7 +10,29 @@ const useWordle = (solution) => {
     // Format a guess nto an array of letter objects
     // e.g. [{ key: 'a', color: 'yellow' }]
     const formatGuess = () => {
-        console.log('formatting the guess:', currentGuess)
+        let solutionArray = [...solution]; // spread the solution so we can check them one by one
+        let formattedGuess = [...currentGuess].map((e) => {
+            return {key: e, color: 'grey'} // Create an object with 'key' and 'color'; set default value of 'color' as grey. 
+        })
+
+        // Find green letter
+        formattedGuess.forEach((e, i) => {
+            // e is the element (letter), while i is the index, this means it will only return the element with the same index number.
+            if (solutionArray[i] === e.key) {
+                formattedGuess[i].color = 'green';
+                solutionArray[i] = null; // To prevent double match by making the solution char into null. This called with green color because green color is the priority (hierarchy).
+            }
+        })
+
+        // Find yellow letter
+        formattedGuess.forEach((e, i) => {
+            if (solutionArray.includes(e.key) && e.color !== 'green') {
+                formattedGuess[i].color = 'yellow';
+                solutionArray[solutionArray.indexOf(e.key)] = null; 
+            }
+        })
+
+        return formattedGuess;
     }
 
     // Add a new guess to the guesses state
@@ -42,7 +64,9 @@ const useWordle = (solution) => {
                 console.log('Word must be 5 chars long');
                 return;
             }
-            formatGuess();
+            
+            const formatted = formatGuess();
+            console.log(formatted);
         }
         // Delete the last guess
         if (key === 'Backspace') {
