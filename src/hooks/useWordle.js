@@ -10,7 +10,7 @@ const useWordle = (solution) => {
     // Format a guess nto an array of letter objects
     // e.g. [{ key: 'a', color: 'yellow' }]
     const formatGuess = () => {
-
+        console.log('formatting the guess:', currentGuess)
     }
 
     // Add a new guess to the guesses state
@@ -22,8 +22,48 @@ const useWordle = (solution) => {
 
     // Handle keyup event & track current guess
     // If user presses enter, add the new guess
-    const handleKeyup = () => {
+    const handleKeyup = ({ key }) => {
+        // Submit the guess
+        if (key === 'Enter') {
+            // Only add guess if the turn is less than 5.
+            if (turn > 5) {
+                console.log('You used all of your chances');
+                return;
+            }
+            // Don't allow duplicate words.
+            if (history.includes(currentGuess)) {
+                console.log('You already tried this word');
+                return;
+            } /* else {
+                history.push(currentGuess)
+            } */
+            // Check word is 5 chars long. 
+            if (currentGuess.length !== 5) {
+                console.log('Word must be 5 chars long');
+                return;
+            }
+            formatGuess();
+        }
+        // Delete the last guess
+        if (key === 'Backspace') {
+            setCurrentGuess(prev => prev.slice(0, -1));
+            return; // to stop other conditional because we don't need to check them all. (key === 'Backspace);
+        }
 
+        // Guard Clauses Technique
+        // Check whether the key is A-Z and a-z or not
+        if (!/^[A-Za-z]$/.test(key)) {
+            return;
+        }
+        // Check the length of the guess
+        if (currentGuess.length >= 5) {
+            return;
+        }
+        setCurrentGuess(prev => prev + key);
+    }
+
+    return {
+        turn, currentGuess, guesses, isCorrect, handleKeyup
     }
 };
 
