@@ -55,7 +55,7 @@ const useWordle = (solution) => {
             return [...prevHistory, currentGuess]
         });
 
-        // Add turn
+        // Add turn to turn state
         setTurn(prevTurn => {
             return prevTurn + 1;
         });
