@@ -62,6 +62,8 @@ const useWordle = (solution) => {
 
         // Clear currentGuess
         setCurrentGuess('');
+
+        console.log(history, guesses, turn);
     }
 
     // Handle keyup event & track current guess

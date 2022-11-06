@@ -12,3 +12,10 @@ solutionChar.forEach((e, i) => {
         console.log(solutionChar[i]);
     }
 })
+
+
+const answerChars = solution.split('');
+const array = [...Array(5 - answerChars.length)].map(e => console.log(e));
+console.log(array);
+
+console.log(5 - answerChars.length);
