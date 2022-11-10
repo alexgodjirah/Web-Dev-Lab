@@ -3,16 +3,16 @@ import Card from '../features/Card';
 import useCard from '../hooks/useCard'
 
 export default function PlayerHands() {
-  const { playerCards } = useCard(2);
+  const { playerCards } = useCard('player');
 
   return (
     <div>
       <h2>Player Hands</h2>
       {/* {JSON.stringify(playerCards)} */}
       {
-        playerCards.map(({ id, card, suit }) => {
+        playerCards.map(({ card, suit }, idx) => {
           return (
-            <Card key={id} card={card} suit={suit} />
+            <Card key={idx} card={card} suit={suit} />
           )
         }) 
       }
