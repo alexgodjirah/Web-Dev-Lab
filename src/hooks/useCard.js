@@ -43,7 +43,7 @@ const useCard = (owner) => {
                 .catch(err => console.log(err));
         }
 
-        if (owner === 'flop') {
+        if (owner === 'community') {
             Promise.all([
                 fetch('http://localhost:3001/cards'),
                 fetch('http://localhost:3001/suits'),
@@ -55,77 +55,55 @@ const useCard = (owner) => {
                     const randomCards = [
                         dataCard[Math.floor(Math.random() * dataCard.length)].key,
                         dataCard[Math.floor(Math.random() * dataCard.length)].key,
+                        dataCard[Math.floor(Math.random() * dataCard.length)].key,
+                        dataCard[Math.floor(Math.random() * dataCard.length)].key,
                         dataCard[Math.floor(Math.random() * dataCard.length)].key
                     ];
                     const randomSuit = [
                         dataSuit[Math.floor(Math.random() * dataSuit.length)].key,
                         dataSuit[Math.floor(Math.random() * dataSuit.length)].key,
+                        dataSuit[Math.floor(Math.random() * dataSuit.length)].key,
+                        dataSuit[Math.floor(Math.random() * dataSuit.length)].key,
                         dataSuit[Math.floor(Math.random() * dataSuit.length)].key
                     ];
                     return (
-                        setFlop((prevFloop) => {
-                            let newFlop = [...prevFloop];
-                            newFlop[0] = {
-                                id: 'flop1',
+                        setCommunityCard((prevCommunity) => {
+                            let newCommunityCard = [...prevCommunity];
+                            newCommunityCard[0] = {
+                                id: 1,
                                 card: randomCards[0],
                                 suit: randomSuit[0]
                             };
-                            newFlop[1] ={
-                                id: 'flop2',
+                            newCommunityCard[1] ={
+                                id: 2,
                                 card: randomCards[1],
                                 suit: randomSuit[1]
                             };
-                            newFlop[2] = {
-                                id: 'flop3',
+                            newCommunityCard[2] = {
+                                id: 3,
                                 card: randomCards[2],
                                 suit: randomSuit[2]
                             };
+                            newCommunityCard[3] = {
+                                id: 4,
+                                card: randomCards[3],
+                                suit: randomSuit[3]
+                            };
+                            newCommunityCard[4] = {
+                                id: 5,
+                                card: randomCards[4],
+                                suit: randomSuit[4]
+                            };
 
-                            return newFlop;
+                            return newCommunityCard;
                         })
                     )
                 })
                 .catch(err => console.log(err));
         }
+    }, [setPlayerCards, setCommunityCard])
 
-        if (owner === 'turn') {
-            Promise.all([
-                fetch('http://localhost:3001/cards'),
-                fetch('http://localhost:3001/suits'),
-            ])
-                .then(([resCard, resSuit]) => {
-                    return Promise.all([resCard.json(), resSuit.json()])
-                })
-                .then(([dataCard, dataSuit]) => {
-                    return setTurn({
-                        id: 'turn',
-                        card: dataCard[Math.floor(Math.random() * dataCard.length)].key,
-                        suit: dataSuit[Math.floor(Math.random() * dataSuit.length)].key
-                    })
-                })
-                .catch(err => console.log(err));
-        }
-
-        if (owner === 'river') {
-            Promise.all([
-                fetch('http://localhost:3001/cards'),
-                fetch('http://localhost:3001/suits'),
-            ])
-                .then(([resCard, resSuit]) => {
-                    return Promise.all([resCard.json(), resSuit.json()])
-                })
-                .then(([dataCard, dataSuit]) => {
-                    return setRiver({
-                        id: 'river',
-                        card: dataCard[Math.floor(Math.random() * dataCard.length)].key,
-                        suit: dataSuit[Math.floor(Math.random() * dataSuit.length)].key
-                    })
-                })
-                .catch(err => console.log(err));
-        }
-    }, [setPlayerCards, setFlop, setTurn, setRiver])
-
-    return  { playerCards, flop, turn, river }
+    return  { playerCards, communityCard }
 }
 
 export default useCard;
