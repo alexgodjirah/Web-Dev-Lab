@@ -2,15 +2,16 @@ import { useState, useEffect } from 'react';
 
 
 const useCard = (owner) => {
-    const [card, setCard] = useState(null); // To store card's number
-    const [suit, setSuit] = useState(null); // To store card's suit
-    const [round, setRound] = useState(0); // To store the game's ROUND 
-    const [flop, setFlop] = useState([Array(3)]); // To store community's FLOP
-    const [turn, setTurn] = useState({}); // To store community's TURN
-    const [river, setRiver] = useState({}); // To store community's RIVER
+    // const [card, setCard] = useState(null); // To store card's number
+    // const [suit, setSuit] = useState(null); // To store card's suit
+    // const [round, setRound] = useState(0); // To store the game's ROUND 
+    // const [flop, setFlop] = useState([Array(3)]); // To store community's FLOP
+    // const [turn, setTurn] = useState({}); // To store community's TURN
+    // const [river, setRiver] = useState({}); // To store community's RIVER
     const [playerCards, setPlayerCards] = useState([Array(2)]); // To track player's cards. Has 3 keys: (id, card, suits)
     const [communityCard, setCommunityCard] = useState([Array(5)]); // To track community's cards. Has 3 keys: floop, turn, and river. Each keys has 3 keys: (id, card, suit) for each card drawn. 
-    const [cardHistory, setCardHistory] = useState([]); // To track the cards issued. Has 3 keys: (id, card, suit).
+    const [cardList, setCardList] = useState({}); // To contain the cards issued. To contain all card in the table using object: {community: {}, player: {}}
+    const [cardHistory, setCardHistory] = useState([]); // To track the cards issued in order to avoid issuing double cards. 
 
     // Card Fethcer
     useEffect(() => {
@@ -101,7 +102,16 @@ const useCard = (owner) => {
                 })
                 .catch(err => console.log(err));
         }
-    }, [setPlayerCards, setCommunityCard])
+    }, [setPlayerCards, setCommunityCard]);
+
+    const trackCard = (card) => {
+        if (cardHistory.includes(card)) {
+            return;
+        }
+        setCardHistory(prevCard => {
+            
+        })
+    }
 
     return  { playerCards, communityCard }
 }
