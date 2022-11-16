@@ -6,7 +6,7 @@ export default function AboutMe() {
     <div className='aboutMe'>
 
         <div className='text'>
-            <h2 className='title'>About Me</h2>
+            <h2>About Me</h2>
 
             <div>
                 <p>Hello, I'm Alexander and I'm a Front-End Web Developer</p>
