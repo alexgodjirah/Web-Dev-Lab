@@ -1,3 +1,4 @@
+import '../styles/navbar.css';
 import React from 'react'
 
 export default function Navbar() {
@@ -9,10 +10,15 @@ export default function Navbar() {
             </div>
 
             <div className='navbar-item'>
-                <h3>Home</h3>
-                <h3>About Me</h3>
-                <h3>Personal Project?</h3>
-                <button id='contact-me'>Contact Me</button>
+                <a href='#first-page'>
+                  <h3>Home</h3>
+                </a>
+                <a href='#about-me'>
+                  <h3>About Me</h3>
+                </a>
+                <a href='#project'>
+                  <h3>Project</h3>
+                </a>
             </div>
         </nav>
     </div>
