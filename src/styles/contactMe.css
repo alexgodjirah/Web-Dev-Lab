@@ -61,6 +61,12 @@
 #message {
     width: 45vw;
     height: 10vh;
+    margin-bottom: 2vh;
+}
+
+#submit-button {
+    width: 10vw;
+    height: 4vh;
 }
 
 textarea {

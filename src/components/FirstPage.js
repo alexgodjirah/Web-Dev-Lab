@@ -4,17 +4,17 @@ import React from 'react'
 export default function FirstPage() {
   return (
     <div className='firstPage'>
+      
         <div className='title'>
-            <h1>Hi, I'm Alexander</h1>
+            <h3>Hi, I'm</h3>
+            <h1>Alexander <span>Gozali</span></h1>
+            <h5>I'm A <span className='frontEnd'>Front-End Developer</span></h5>
+            <div className='button'>
+                <a href='#project'><button id='myProject'>My Project</button></a>
+                <a href='#contact-me'><button id='myContact'>Contact Me</button></a>
+            </div>
         </div>
 
-        <div className='sub-title'>
-            <h3>I'm A Front-End Developer</h3>
-        </div>
-
-        <div className='contact-button'>
-            <button>Contact Me</button>
-        </div>
     </div>
   )
 }

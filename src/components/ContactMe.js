@@ -47,6 +47,8 @@ export default function ContactMe() {
                     <label>Message</label>
                     <textarea id='message' type='text' />
                 </div>
+
+                <button id='submit-button' type='submit'>Submit</button>
             </form>
             </div>
         </div>
