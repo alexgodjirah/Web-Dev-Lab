@@ -5,16 +5,16 @@ export default function AboutMe() {
   return (
     <div className='aboutMe'>
 
-        <div className='text'>
+        <div className='summary'>
             <h2>About Me</h2>
 
-            <div>
+            <div className='text'>
                 <p>Hello, I'm Alexander and I'm a Front-End Web Developer</p>
 
                 <p>I'm passionate about creating a mindful and meaningful products (website, food, arts) using my creativity, curiosity, and discipline to help me fulfilling my dreams</p>
             </div>
 
-            <div>
+            <div className='button'> 
                 <button>Resume</button>
                 <button>Hire Me</button>
             </div>

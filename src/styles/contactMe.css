@@ -1,0 +1,82 @@
+/* Email Form */
+.getInTouch > h1 {
+    text-align: center;
+
+    margin-bottom: 5vh;
+}
+
+.contactMe {
+    display: grid;
+
+    grid-template-areas: 
+        "data inputs"
+    ;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(1, 1fr); */
+
+    margin-right: 5vw;
+    margin-left: 10vw;
+}
+
+.contactMe > h1 {
+    text-align: center;
+}
+
+.inputs {
+    display: grid;
+}
+
+.inputs .name-email {
+    display: flex;
+    
+    margin-bottom: 2vh;
+}
+
+.nameContainer {
+    display: grid;
+
+    margin-right: auto;
+}
+
+.emailContainer, .subjectContainer, .messageContainer {
+    display: grid;
+} 
+
+#name {
+    width: 22vw;
+    height: 5vh;
+}
+
+#email {
+    width: 22vw;
+    height: 5vh;
+}
+
+#subject {
+    width: 45vw;
+    height: 5vh;
+    margin-bottom: 2vh;
+}
+
+#message {
+    width: 45vw;
+    height: 10vh;
+}
+
+textarea {
+    resize: none;
+}
+
+
+/* Personal Data */
+.myPhone, .myEmail, .mySocials {
+    margin-bottom: 2.5vh;
+}
+
+.myPhone > h4, .myEmail > h4, .mySocials > h4 {
+    margin-bottom: .5vh;
+}
+
+.myPhone > p, .myEmail > p, .mySocials > p {
+    text-indent: 1vw;
+}

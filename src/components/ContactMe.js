@@ -1,25 +1,54 @@
+import '../styles/contactMe.css'
 import React from 'react'
 
 export default function ContactMe() {
   return (
-    <div>
+    <div className='getInTouch'>
         <h1>Get In Touch</h1>
 
-        <div>
-            <h5>Phone</h5>
-                <p>+62813-3076-8081</p>
-            <h5>Email</h5>
-                <p>alexandercgoz21@gmail.com</p>
-            <h5>Socials</h5>
-                <p>LinkedIn</p>
-                <p>GitHub</p>
-        </div>
+        <div className='contactMe'>
+            <div className='personalData'>
+                <div className='myPhone'>
+                    <h4>Phone</h4>
+                        <p>(+62) 813-3076-8081</p>
+                    </div>
 
-        <div>
-            <input placeholder='name' />
-            <input placeholder='email' />
-            <input placeholder='subject' />
-            <input placeholder='message' />
+                <div className='myEmail'>
+                    <h4>Email</h4>
+                        <p>alexandercgoz21@gmail.com</p>
+                    </div>
+                <div className='mySocials'>
+                    <h4>Socials</h4>
+                        <p>LinkedIn</p>
+                        <p>GitHub</p>
+                </div>
+            </div>
+
+            <div className='inputs'>
+            <form autoComplete='on'>
+                <div className='name-email'>
+                    <div className='nameContainer'>
+                        <label>Name</label>
+                        <input id='name' type='name' />
+                    </div>
+
+                    <div className='emailContainer'>
+                        <label>Email</label>
+                        <input id='email' type='email' />
+                    </div>
+                </div>
+                
+                <div className='subjectContainer'>
+                    <label>Subject</label>
+                    <input id='subject' type='text' />
+                </div>
+
+                <div className='messageContainer'>
+                    <label>Message</label>
+                    <textarea id='message' type='text' />
+                </div>
+            </form>
+            </div>
         </div>
     </div>
   )
