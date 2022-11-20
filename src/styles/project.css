@@ -1,0 +1,92 @@
+/* .project {
+    display: grid;
+    grid-template-areas: 
+        "project"
+    ;
+} */
+
+.project > h2 {
+    text-align: center;
+
+    margin-bottom: 4vh;
+}
+
+.project > h4 {
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+
+
+.listOfProject {
+    display: grid;
+
+    grid-template-areas: 
+        "project1 project2"
+        "project3 project4"
+    ;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    margin: 1vh 5vw 5vh 5vw;
+}
+
+#project1, #project2, #project3, #project4 {
+    display: grid;
+    grid-template-areas: 
+        "project"
+        "button"
+    ;
+
+    grid-template-rows: 1fr .2fr;
+
+    justify-items: center;
+    /* justify-self: center; */
+    
+    height: 60vh;
+
+    margin: 1.5vh 1.5vh 1.5vh 1.5vh;
+}
+
+.projectContainer {
+    display: grid;
+    grid-template-areas: 
+        "title"
+        "subtitle"
+        "project"
+    ;
+
+    align-items: center;
+
+    grid-template-rows: .1fr .1fr 1fr;
+}
+
+.projectContainer > h4, .projectContainer > h5 {
+    text-align: center;
+}
+
+.project-action-button {
+    display: grid;
+    grid-template-areas: 
+        "liveCode code"
+    ;
+
+    grid-template-columns: 10vw 10vw;
+
+    justify-items: center;
+}
+
+.liveDemo-button {
+    width: 120px;
+    height: 30px;
+
+    /* margin-right: .5vw; */
+}
+
+.code-button {
+    width: 100px;
+    height: 30px;
+
+    /* margin-left: .5vw; */
+}

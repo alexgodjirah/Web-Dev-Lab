@@ -4,7 +4,7 @@ import React from 'react'
 export default function ContactMe() {
   return (
     <div className='getInTouch'>
-        <h1>Get In Touch</h1>
+        <h2>Get In Touch</h2>
 
         <div className='contactMe'>
             <div className='personalData'>

@@ -13,17 +13,17 @@ function App() {
 
       <div id="first-page">
         <FirstPage />
-      </div> */}
+      </div>
       
       <div id="about-me">
         <AboutMe />
-      </div>
+      </div> */}
 
-      {/* <div id="project">
+      <div id="project">
         <Project />
       </div>
       
-      <div id="contact-me">
+      {/* <div id="contact-me">
         <ContactMe />
       </div> */}
     </div>

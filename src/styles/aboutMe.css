@@ -64,7 +64,7 @@
     margin-right: 15vw;
 }
 
-div > h3 {
+#frontEnd-skills > h3, #backEnd-skills > h3, #languages-skills > h3, #tools-skills > h3 {
     margin-left: 3vw;
 }
 
