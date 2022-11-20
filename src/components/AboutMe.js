@@ -9,21 +9,21 @@ export default function AboutMe() {
             <h2>About Me</h2>
 
             <div className='text'>
-                <p>Hello, I'm Alexander and I'm a Front-End Web Developer</p>
-
-                <p>I'm passionate about creating a mindful and meaningful products (website, food, arts) using my creativity, curiosity, and discipline to help me fulfilling my dreams</p>
+                <p>Hello, I'm Alexander and I'm a <span>Front-End Web Developer</span>.</p>
+                <br />
+                <p>I'm passionate about creating a mindful and meaningful products using my creativity, curiosity, and discipline to help me fulfilling my dreams.</p>
+                <div className='button'> 
+                    <a><button id='myResume'>Resume</button></a>
+                    <a><button id='hireMe'>Hire Me</button></a>
+                </div>
             </div>
 
-            <div className='button'> 
-                <button>Resume</button>
-                <button>Hire Me</button>
-            </div>
         </div>
 
         <div className='skills'>
             <h2>Skills</h2>
             <div className='skills-grid'>
-                <div>
+                <div id='frontEnd-skills'>
                     <h3>Front-End</h3>
                         <ul>
                             <li>HTML</li>
@@ -35,7 +35,7 @@ export default function AboutMe() {
                             <li>Material UI</li>
                         </ul>
                 </div>
-                <div>
+                <div id='backEnd-skills'>
                     <h3>Back-End</h3>
                         <ul>
                             <li>NodeJS</li>
@@ -44,14 +44,14 @@ export default function AboutMe() {
                             <li>PostgreSQL</li>
                         </ul>
                 </div>
-                <div>
-                    <h3>Language</h3>
+                <div id='languages-skills'>
+                    <h3>Languages</h3>
                         <ul>
                             <li>JavaScript</li>
                             <li>C#</li>
                         </ul>
                 </div>
-                <div>
+                <div id='tools-skills'>
                     <h3>Tools</h3>
                         <ul>
                             <li>VS Code</li>
