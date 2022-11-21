@@ -12,7 +12,7 @@ export default function Project() {
             <div className='projectContainer'>
               <h4>Project 1</h4>
               <h5>Sub-Title</h5>
-              <img src='https://via.placeholder.com/480x270.png' alt='project' />
+              <img src='https://via.placeholder.com/480x270.png' alt='project' className='image1'/>
             </div>
               
             <div className='project-action-button'>

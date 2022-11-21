@@ -7,7 +7,7 @@ import Project from "./components/Project";
 function App() {
   return (
     <div className="App">
-      {/* <div id="navbar">
+      <div id="navbar">
           <Navbar />
       </div>
 
@@ -17,15 +17,15 @@ function App() {
       
       <div id="about-me">
         <AboutMe />
-      </div> */}
+      </div>
 
       <div id="project">
         <Project />
       </div>
       
-      {/* <div id="contact-me">
+      <div id="contact-me">
         <ContactMe />
-      </div> */}
+      </div>
     </div>
   );
 }
