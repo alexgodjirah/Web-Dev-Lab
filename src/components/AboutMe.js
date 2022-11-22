@@ -3,62 +3,62 @@ import React from 'react'
 
 export default function AboutMe() {
   return (
-    <div className='aboutMe'>
+    <div className='about-me'>
 
-        <div className='summary'>
-            <h2>About Me</h2>
+        <div className='about-me__summary'>
+            <h2 className='summary__title'>About Me</h2>
 
-            <div className='text'>
+            <div className='summary__text'>
                 <p>Hello, I'm Alexander and I'm a <span>Front-End Web Developer</span>.</p>
                 <br />
                 <p>I'm passionate about creating a mindful and meaningful products using my creativity, curiosity, and discipline to help me fulfilling my dreams.</p>
-                <div className='button'> 
-                    <a><button id='myResume'>Resume</button></a>
-                    <a><button id='hireMe'>Hire Me</button></a>
+                <div className='summary__button'> 
+                    <a><button className='button__myResume'>Resume</button></a>
+                    <a><button className='button__hireMe'>Hire Me</button></a>
                 </div>
             </div>
 
         </div>
 
-        <div className='skills'>
-            <h2>Skills</h2>
-            <div className='skills-grid'>
-                <div id='frontEnd-skills'>
-                    <h3>Front-End</h3>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>ReactJS</li>
-                            <li>NextJS</li>
-                            <li>Vue</li>
-                            <li>Redux</li>
-                            <li>Material UI</li>
+        <div className='about-me__skills'>
+            <h2 className='skills__title'>Skills</h2>
+            <div className='skills__container'>
+                <div className='skills__container-item'>
+                    <h3 className='container-item__title'>Front-End</h3>
+                        <ul className='container-item__list'>
+                            <li className='container-item__item'>HTML</li>
+                            <li className='container-item__item'>CSS</li>
+                            <li className='container-item__item'>ReactJS</li>
+                            <li className='container-item__item'>NextJS</li>
+                            <li className='container-item__item'>Vue</li>
+                            <li className='container-item__item'>Redux</li>
+                            <li className='container-item__item'>Material UI</li>
                         </ul>
                 </div>
-                <div id='backEnd-skills'>
-                    <h3>Back-End</h3>
-                        <ul>
-                            <li>NodeJS</li>
-                            <li>ExpressJS</li>
-                            <li>Sequelize ORM</li>
-                            <li>PostgreSQL</li>
+                <div className='skills__container-item'>
+                    <h3 className='container-item__title'>Back-End</h3>
+                        <ul className='container-item__list'>
+                            <li className='container-item__item'>NodeJS</li>
+                            <li className='container-item__item'>ExpressJS</li>
+                            <li className='container-item__item'>Sequelize ORM</li>
+                            <li className='container-item__item'>PostgreSQL</li>
                         </ul>
                 </div>
-                <div id='languages-skills'>
-                    <h3>Languages</h3>
-                        <ul>
-                            <li>JavaScript</li>
-                            <li>C#</li>
+                <div className='skills__container-item'>
+                    <h3 className='container-item__title'>Languages</h3>
+                        <ul className='container-item__list'>
+                            <li className='container-item__item'>JavaScript</li>
+                            <li className='container-item__item'>C#</li>
                         </ul>
                 </div>
-                <div id='tools-skills'>
-                    <h3>Tools</h3>
-                        <ul>
-                            <li>VS Code</li>
-                            <li>Postman</li>
-                            <li>Git</li>
-                            <li>Bash</li>
-                            <li>Figma</li>
+                <div className='skills__container-item'>
+                    <h3 className='container-item__title'>Tools</h3>
+                        <ul className='container-item__list'>
+                            <li className='container-item__item'>VS Code</li>
+                            <li className='container-item__item'>Postman</li>
+                            <li className='container-item__item'>Git</li>
+                            <li className='container-item__item'>Bash</li>
+                            <li className='container-item__item'>Figma</li>
                         </ul>
                 </div>
             </div>

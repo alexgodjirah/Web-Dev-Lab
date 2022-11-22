@@ -6,49 +6,49 @@ export default function ContactMe() {
     <div className='getInTouch'>
         <h2>Get In Touch</h2>
 
-        <div className='contactMe'>
-            <div className='personalData'>
-                <div className='myPhone'>
-                    <h4>Phone</h4>
-                        <p>(+62) 813-3076-8081</p>
+        <div className='getInTouch__contactMe'>
+            <div className='contactMe__personalData'>
+                <div className='personalData__myPhone'>
+                    <h4 className='myPhone__title'>Phone</h4>
+                        <p className='myPhone__paragraph'>(+62) 813-3076-8081</p>
                     </div>
 
-                <div className='myEmail'>
-                    <h4>Email</h4>
-                        <p>alexandercgoz21@gmail.com</p>
+                <div className='personalData__myEmail'>
+                    <h4 className='myEmail__title'>Email</h4>
+                        <p className='myEmail__paragraph'>alexandercgoz21@gmail.com</p>
                     </div>
-                <div className='mySocials'>
-                    <h4>Socials</h4>
-                        <p>LinkedIn</p>
-                        <p>GitHub</p>
+                <div className='personalData__mySocials'>
+                    <h4 className='mySocials__title'>Socials</h4>
+                        <p className='mySocials__paragraph'>LinkedIn</p>
+                        <p className='mySocials__paragraph'>GitHub</p>
                 </div>
             </div>
 
-            <div className='inputs'>
-            <form autoComplete='on'>
-                <div className='name-email'>
-                    <div className='nameContainer'>
+            <div className='form-inputs'>
+            <form>
+                <div className='form-inputs__name-email'>
+                    <div className='name-email__name-container'>
                         <label>Name</label>
-                        <input id='name' type='name' />
+                        <input className='name-container__input' type='name' />
                     </div>
 
-                    <div className='emailContainer'>
+                    <div className='name-email__email-container'>
                         <label>Email</label>
-                        <input id='email' type='email' />
+                        <input className='email-container__input' type='email' />
                     </div>
                 </div>
                 
-                <div className='subjectContainer'>
+                <div className='form-inputs__subject-container'>
                     <label>Subject</label>
-                    <input id='subject' type='text' />
+                    <input className='subject-container__input' type='text' />
                 </div>
 
-                <div className='messageContainer'>
+                <div className='form-inputs__message-container'>
                     <label>Message</label>
-                    <textarea id='message' type='text' />
+                    <textarea className='message-container__input' type='text' />
                 </div>
 
-                <button id='submit-button' type='submit'>Submit</button>
+                <button className='form-inputs__submit-button' type='submit'>Submit</button>
             </form>
             </div>
         </div>

@@ -5,7 +5,7 @@
     margin-bottom: 5vh;
 }
 
-.contactMe {
+.getInTouch__contactMe {
     display: grid;
 
     grid-template-areas: 
@@ -18,71 +18,63 @@
     margin-left: 10vw;
 }
 
-.contactMe > h1 {
-    text-align: center;
-}
-
-.inputs {
+.form-inputs {
     display: grid;
 }
 
-.inputs .name-email {
+.form-inputs__name-email {
     display: flex;
     
     margin-bottom: 2vh;
 }
 
-.nameContainer {
+.name-email__name-container {
     display: grid;
 
     margin-right: auto;
 }
 
-.emailContainer, .subjectContainer, .messageContainer {
+.name-email__email-container, .form-inputs__subject-container, .form-inputs__message-container {
     display: grid;
 } 
 
-#name {
+.name-container_input {
     width: 22vw;
     height: 5vh;
 }
 
-#email {
+.email-container__input {
     width: 22vw;
     height: 5vh;
 }
 
-#subject {
+.subject-container__input {
     width: 45vw;
     height: 5vh;
     margin-bottom: 2vh;
 }
 
-#message {
+.message-container__input {
     width: 45vw;
     height: 10vh;
     margin-bottom: 2vh;
 }
 
-#submit-button {
+.form-inputs__submit-button {
     width: 10vw;
     height: 4vh;
 }
 
-textarea {
-    resize: none;
-}
-
 
 /* Personal Data */
-.myPhone, .myEmail, .mySocials {
+.personalData__myPhone, .personalData__myEmail, .personalData__mySocials {
     margin-bottom: 2.5vh;
 }
 
-.myPhone > h4, .myEmail > h4, .mySocials > h4 {
+.myPhone__title, .myEmail__title, .mySocials__title {
     margin-bottom: .5vh;
 }
 
-.myPhone > p, .myEmail > p, .mySocials > p {
+.myPhone__paragraph, .myEmail__paragraph, .mySocials__paragraph {
     text-indent: 1vw;
 }

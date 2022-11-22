@@ -1,14 +1,14 @@
-nav {
+.navbar {
   display: flex;
 
   margin: 3vh 4vw 0 4vw;
 }
 
-.logo {
+.navbar__logo {
   margin-right: auto;
 }
 
-.navbar-item {
+.navbar__item {
   display: grid;
 
   grid-template-areas:

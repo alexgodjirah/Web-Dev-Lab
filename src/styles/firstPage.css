@@ -6,27 +6,27 @@
     grid-template-columns: 1fr .75fr;
 }
 
-.title {
+.firstPage__title {
     justify-self: center;
     align-self: center;
 }
 
-.button {
+.firstPage__button {
     margin-top: 5vh;
 }
 
-.button #myProject {
+.firstPage__button .button__myProject {
     width: 9vw;
     height: 4vh;
     
     margin-right: 1vw;
 }
 
-.button #myContact {
+.firstPage__button .button__myContact {
     width: 9vw;
     height: 4vh;
 }
 
-.frontEnd {
+.firstPage__h5--color {
     color: red;
 }

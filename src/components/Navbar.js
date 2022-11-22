@@ -4,12 +4,12 @@ import React from 'react'
 export default function Navbar() {
   return (
     <div>
-        <nav>
-            <div className='logo'>  
+        <nav className='navbar'>
+            <div className='navbar__logo'>  
                 <h3>Logo</h3>
             </div>
 
-            <div className='navbar-item'>
+            <div className='navbar__item'>
                 <a href='#first-page'>
                   <h3>Home</h3>
                 </a>
