@@ -38,7 +38,7 @@
     display: grid;
 } 
 
-.name-container_input {
+.name-container__input {
     width: 22vw;
     height: 5vh;
 }
