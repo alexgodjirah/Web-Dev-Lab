@@ -1,0 +1,31 @@
+.background-color-1 {
+    background-color: #2E2F34;
+}
+
+.background-color-2 {
+    background-color: #34353A;
+}
+
+.firstPage__h5--color {
+    color: #1ad3b4;
+}
+
+.firstPage__h1--size {
+    font-size: 75px;
+}
+
+.button {
+    width: 9vw;
+    height: 5vh;
+    
+    color: #1ad3b4;
+    border: 1px solid #1ad3b4;
+}
+
+.input__background-color {
+    background-color: #2E2F34;
+    /* background-color: #7A7A7A; */
+    border: 1px solid #2E2F34;
+
+    padding: 10px 10px 10px 10px;
+}

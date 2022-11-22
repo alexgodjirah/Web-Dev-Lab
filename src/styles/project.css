@@ -1,0 +1,94 @@
+/* .project {
+    display: grid;
+    grid-template-areas: 
+        "project"
+    ;
+} */
+
+.project .project__title {
+    text-align: center;
+
+    margin-bottom: 4vh;
+}
+
+.project .project__subtitle  {
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+
+
+.project .project__listOfProject {
+    display: grid;
+
+    grid-template-areas: 
+        "project1 project2"
+        "project3 project4"
+    ;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    margin: 1vh 5vw 5vh 5vw;
+}
+
+.project__listOfProject .listOfProject__projectContainer {
+    display: grid;
+    grid-template-areas: 
+        "project"
+        "button"
+    ;
+
+    grid-template-rows: 1fr .2fr;
+
+    justify-items: center;
+    /* justify-self: center; */
+    
+    height: 60vh;
+
+    margin: 1.5vh 1.5vh 1.5vh 1.5vh;
+}
+
+.projectContainer__projectDetail {
+    display: grid;
+    grid-template-areas: 
+        "title"
+        "subtitle"
+        "project"
+    ;
+
+    align-items: center;
+
+    grid-template-rows: .1fr .1fr 1fr;
+}
+
+.projectDetail__title, .projectDetail__subtitle {
+    text-align: center;
+}
+
+.projectContainer__actionButton {
+    display: grid;
+    grid-template-areas: 
+        "liveCode code"
+    ;
+
+    margin-top: 2vh;
+    
+    grid-template-columns: 10vw 10vw;
+
+    justify-items: center;
+}
+
+.actionButton__liveDemo-button {
+    width: 120px;
+    height: 30px;
+
+    /* margin-right: .5vw; */
+}
+
+.actionButton__code-button {
+    width: 100px;
+    height: 30px;
+
+    /* margin-left: .5vw; */
+}

@@ -1,0 +1,20 @@
+.firstPage {
+    display: grid;
+    grid-template-areas: 
+        "title image"
+    ;
+    grid-template-columns: 1fr .75fr;
+}
+
+.firstPage__title {
+    justify-self: center;
+    align-self: center;
+}
+
+.firstPage__button {
+    margin-top: 4vh;
+}
+
+.firstPage__button .button__myProject {   
+    margin-right: 1vw;
+}
