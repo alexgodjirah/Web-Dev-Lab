@@ -17,8 +17,8 @@ export default function Project() {
             </div>
               
             <div className='projectContainer__actionButton'>
-              <a href><button className='actionButton__liveDemo-button'>Live Demo</button></a>
-              <a href><button className='actionButton__code-button'>Code</button></a>
+              <a href><button className='button background-color-1 actionButton__liveDemo-button'>Live Demo</button></a>
+              <a href><button className='button background-color-1 actionButton__code-button'>Code</button></a>
             </div>
           </div>
           
@@ -30,8 +30,8 @@ export default function Project() {
             </div>
 
             <div className='projectContainer__actionButton'>
-              <a href><button className='actionButton__liveDemo-button'>Live Demo</button></a>
-              <a href><button className='actionButton__code-button'>Code</button></a>
+              <a href><button className='button background-color-1 actionButton__liveDemo-button'>Live Demo</button></a>
+              <a href><button className='button background-color-1 actionButton__code-button'>Code</button></a>
             </div>            
           </div>
 
@@ -43,8 +43,8 @@ export default function Project() {
             </div>
             
             <div className='projectContainer__actionButton'>
-              <a href><button className='actionButton__liveDemo-button'>Live Demo</button></a>
-              <a href><button className='actionButton__code-button'>Code</button></a>
+              <a href><button className='button background-color-1 actionButton__liveDemo-button'>Live Demo</button></a>
+              <a href><button className='button background-color-1 actionButton__code-button'>Code</button></a>
             </div>
           </div>
 
@@ -56,8 +56,8 @@ export default function Project() {
             </div>
             
             <div className='projectContainer__actionButton'>
-              <a href><button className='actionButton__liveDemo-button'>Live Demo</button></a>
-              <a href><button className='actionButton__code-button'>Code</button></a>
+              <a href><button className='button background-color-1 actionButton__liveDemo-button'>Live Demo</button></a>
+              <a href><button className='button background-color-1 actionButton__code-button'>Code</button></a>
             </div>
           </div>
           

@@ -4,7 +4,7 @@ import React from 'react'
 export default function ContactMe() {
   return (
     <div className='getInTouch'>
-        <h2>Get In Touch</h2>
+        <h2 className='getInTouch__title'>Get In Touch</h2>
 
         <div className='getInTouch__contactMe'>
             <div className='contactMe__personalData'>
@@ -29,26 +29,26 @@ export default function ContactMe() {
                 <div className='form-inputs__name-email'>
                     <div className='name-email__name-container'>
                         <label>Name</label>
-                        <input className='name-container__input' type='name' />
+                        <input className='input__background-color name-container__input' type='name' />
                     </div>
 
                     <div className='name-email__email-container'>
                         <label>Email</label>
-                        <input className='email-container__input' type='email' />
+                        <input className='input__background-color email-container__input' type='email' />
                     </div>
                 </div>
                 
                 <div className='form-inputs__subject-container'>
                     <label>Subject</label>
-                    <input className='subject-container__input' type='text' />
+                    <input className='input__background-color subject-container__input' type='text' />
                 </div>
 
                 <div className='form-inputs__message-container'>
                     <label>Message</label>
-                    <textarea className='message-container__input' type='text' />
+                    <textarea className='input__background-color message-container__input' type='text' />
                 </div>
 
-                <button className='form-inputs__submit-button' type='submit'>Submit</button>
+                <button className='button background-color-2 form-inputs__submit-button' type='submit'>Submit</button>
             </form>
             </div>
         </div>

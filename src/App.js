@@ -7,23 +7,23 @@ import Project from "./components/Project";
 function App() {
   return (
     <div className="App">
-      <div id="navbar">
+      <div id="navbar" className="background-color-1">
           <Navbar />
       </div>
 
-      <div id="first-page">
+      <div id="first-page" className="background-color-1">
         <FirstPage />
       </div>
       
-      <div id="about-me">
+      <div id="about-me" className="background-color-2">
         <AboutMe />
       </div>
 
-      <div id="project">
+      <div id="project" className="background-color-1">
         <Project />
       </div>
       
-      <div id="contact-me">
+      <div id="contact-me" className="background-color-2">
         <ContactMe />
       </div>
     </div>
