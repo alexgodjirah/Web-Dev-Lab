@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Project() {
   return (
-    <div className='project'>
+    <div className='project font-color-1'>
         <h2 className='project__title'>Projects</h2>
         <h4 className='project__subtitle'>Here's is some of my projects</h4>
 

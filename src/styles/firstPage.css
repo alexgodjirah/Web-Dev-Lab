@@ -1,20 +1,179 @@
-.firstPage {
+.first_page {
     display: grid;
     grid-template-areas: 
-        "title image"
+        "name image title"
     ;
-    grid-template-columns: 1fr .75fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /* position: static; */
 }
 
-.firstPage__title {
-    justify-self: center;
+/* First Page Name Section */
+.first_page--name {
+    display: grid;
+    grid-template-areas: 
+        "greeting"
+        "name"
+        "social-icon"
+    ;
     align-self: center;
+
+    margin-left: 10vw;
 }
 
-.firstPage__button {
-    margin-top: 4vh;
+.name--h1 {
+    margin: 0 0 2vh 0;
+    
+    font-size: 75px;
+    font-weight: 700;
 }
 
-.firstPage__button .button__myProject {   
-    margin-right: 1vw;
+.name--h3 {
+    font-family: Raleway, sans-serif;
+
+    position: relative;
+    left: 10px;
+}
+
+.name--social_icons {
+    display: flex;
+    
+    justify-content: flex-start;
+}
+
+.name--social_icons-gap-3vw {
+    gap: 3vw;
+}
+
+
+/* First Page Image Section */
+.first_page--image {
+    display: flex;
+}
+
+.image--1 {
+    align-self: start;
+    
+    position: relative;
+    left: 0;
+    z-index: 0;
+}
+
+.image--2 {
+    align-self: end;
+    justify-self: end;
+
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* First Page Title Section */
+.first_page--title {
+    display: grid;
+    grid-template-areas: 
+        "title"
+        "action"
+    ;
+    align-self: center;
+    /* margin-left: 10px; */
+
+    position: absolute;
+    right: 10vw;
+}
+
+.title--position {
+    display: grid;
+
+    grid-template-areas: 
+        "junior"
+        "front-end"
+        "developer"
+    ;
+
+    position: relative;
+    bottom: 5vh;
+}
+
+.position--h1 {
+    font-size: 60px;
+
+    position: relative;
+    left: 10px;
+}
+
+.position--h2 {
+    font-size: 30px;
+    letter-spacing: 12px;
+
+    position: relative;
+    left: 12px;
+}
+
+.position--h3 {
+    font-size: medium;
+    font-weight: 500;
+    letter-spacing: 43px;
+
+    position: relative;
+    left: 15px;
+}
+
+.title--action {
+    display: grid;
+    grid-template-areas: 
+        "contact-me"
+        "my-project"
+    ;
+
+    position: absolute;
+
+    top: 35vh;
+    /* bottom: 20vh; */
+    right: 1.5vw;
+}
+
+.action--anchor {
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+    
+    transition: transform .25s ease;
+}
+
+.anchor--decoration--none {
+    text-decoration: none;
+}
+
+/* .anchor--title {
+    position: relative;
+
+    left: 10px;
+} */
+
+.anchor--link:hover {
+    text-decoration: underline;
+}
+
+.anchor--link:hover .anchor--title::before, .anchor--title:hover::before {
+    transform: translateX(-1em) translateZ(0);
+    opacity: 1;
+}
+
+.anchor-link:hover .anchor--title, .anchor--title:hover {
+    transform: translateX(1em) translateZ(0);
+}
+
+.anchor--title::before {
+    pointer-events: none;
+    content: "→";
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    margin-left: -.5em;
+    transform: translateX(-1.5em) translateZ(0);
+    transition: transform .25s ease, opacity .25s ease;
 }

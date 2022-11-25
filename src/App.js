@@ -7,15 +7,15 @@ import Project from "./components/Project";
 function App() {
   return (
     <div className="App">
-      <div id="navbar" className="background-color-1">
+      {/* <div id="navbar" className="background-color-1">
           <Navbar />
-      </div>
+      </div> */}
 
       <div id="first-page" className="background-color-1">
         <FirstPage />
       </div>
       
-      <div id="about-me" className="background-color-2">
+      {/* <div id="about-me" className="background-color-2">
         <AboutMe />
       </div>
 
@@ -25,7 +25,7 @@ function App() {
       
       <div id="contact-me" className="background-color-2">
         <ContactMe />
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -28,24 +28,20 @@ export default function ContactMe() {
             <form>
                 <div className='form-inputs__name-email'>
                     <div className='name-email__name-container'>
-                        <label>Name</label>
-                        <input className='input__background-color name-container__input' type='name' />
+                        <input className='input name-container__input' type='text' placeholder='Name' />
                     </div>
 
                     <div className='name-email__email-container'>
-                        <label>Email</label>
-                        <input className='input__background-color email-container__input' type='email' />
+                        <input className='input email-container__input' type='email' placeholder='Email' />
                     </div>
                 </div>
                 
                 <div className='form-inputs__subject-container'>
-                    <label>Subject</label>
-                    <input className='input__background-color subject-container__input' type='text' />
+                    <input className='input subject-container__input' type='text' placeholder='Subject' />
                 </div>
 
                 <div className='form-inputs__message-container'>
-                    <label>Message</label>
-                    <textarea className='input__background-color message-container__input' type='text' />
+                    <textarea className='input message-container__input' type='text' placeholder='Message' />
                 </div>
 
                 <button className='button background-color-2 form-inputs__submit-button' type='submit'>Submit</button>

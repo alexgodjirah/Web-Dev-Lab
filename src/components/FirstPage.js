@@ -1,29 +1,75 @@
-import '../styles/firstPage.css';
+import '../styles/firstPage.css'
 import React from 'react'
 
 export default function FirstPage() {
-  return (
-    <div className='firstPage'>
-      
-        <div className='firstPage__title'>
-            <h3>Hi, I'm</h3>
-            <h1 className='firstPage__h1--size'>Alexander <span>Gozali</span></h1>
-            <h4>I'm A <span className='firstPage__h5--color'>Front-End Developer</span></h4>
-            <div className='firstPage__button'>
-                <a href='#project'>
-                  <button className='button button__myProject background-color-1'>My Project</button>
-                </a>
-                <a href='#contact-me'>
-                  <button className='button button__myContact background-color-1'>Contact Me</button>
-                </a>
+    return (
+        <div className="first_page">
+            <div className="first_page--name">
+                <h3 className="name--h3 font-color-1">Hi, I'm</h3>
+                <h1 className="name--h1 font-color-2">
+                    Alexander <br /> Gozali
+                </h1>
+
+                <div className="name--social_icons name--social_icons-gap-3vw">
+                    <img
+                        src="https://via.placeholder.com/50x50"
+                        alt="social-icon"
+                    />
+                    <img
+                        src="https://via.placeholder.com/50x50"
+                        alt="social-icon"
+                    />
+                    <img
+                        src="https://via.placeholder.com/50x50"
+                        alt="social-icon"
+                    />
+                </div>
             </div>
 
-            <div className='image'>
-
+            <div className="first_page--image">
+                <img
+                    className="image--1"
+                    src="https://via.placeholder.com/300x500/292929/969696"
+                    alt="placehoder"
+                />
+                <img
+                    className="image--2"
+                    src="https://via.placeholder.com/200x500/da2912/969696"
+                    alt="placehoder"
+                />
             </div>
 
+            <div className="first_page--title">
+                <div className="title--position">
+                    <h3 className="position--h3 font-color-1">JUNIOR</h3>
+                    <h1 className="position--h1 font-color-2">Front-End</h1>
+                    <h2 className="position--h2 font-color-1">DEVELOPER</h2>
+                </div>
+
+                <div className="title--action">
+                    <div className="action--anchor">
+                        <a
+                            className="anchor--link anchor--decoration--none"
+                            href="#contact-me"
+                        >
+                            <h4 className="anchor--title font-color-1">
+                                Contact Me
+                            </h4>
+                        </a>
+                    </div>
+
+                    <div className="action--anchor">
+                        <a
+                            className="anchor--link anchor--decoration--none"
+                            href="#project"
+                        >
+                            <h4 className="anchor--title font-color-1">
+                                My Project
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-    </div>
-  )
+    )
 }

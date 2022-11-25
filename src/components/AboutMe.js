@@ -13,14 +13,14 @@ export default function AboutMe() {
                 <br />
                 <p>I'm passionate about creating a mindful and meaningful products using my creativity, curiosity, and discipline to help me fulfilling my dreams.</p>
                 <div className='summary__button'> 
-                    <a><button className='button background-color-2 button__myResume'>Resume</button></a>
-                    <a><button className='button background-color-2 button__hireMe'>Hire Me</button></a>
+                    <a><button className='button background-color-2'>Resume</button></a>
+                    <a><button className='button background-color-2'>My Projects</button></a>
                 </div>
             </div>
 
         </div>
 
-        <div className='about-me__skills'>
+        <div className='about-me__skills '>
             <h2 className='skills__title'>Skills</h2>
             <div className='skills__container'>
                 <div className='skills__container-item'>

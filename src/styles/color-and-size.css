@@ -1,31 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;600&family=Raleway:wght@300;500&display=swap');
+
+/* Background Color */
 .background-color-1 {
-    background-color: #2E2F34;
+    background-color: #fff;
+    /* background-color: #202020; */
 }
 
 .background-color-2 {
-    background-color: #34353A;
+    background-color: #EEF3EF;
 }
 
-.firstPage__h5--color {
-    color: #1ad3b4;
-}
 
-.firstPage__h1--size {
-    font-size: 75px;
-}
-
+/* Button */
 .button {
     width: 9vw;
     height: 5vh;
     
-    color: #1ad3b4;
-    border: 1px solid #1ad3b4;
+    color: #da2912;
+    border: 1px solid #da2912;
 }
 
-.input__background-color {
+/* Input */
+.input {
     background-color: #2E2F34;
     /* background-color: #7A7A7A; */
     border: 1px solid #2E2F34;
 
-    padding: 10px 10px 10px 10px;
+    padding: 5px 10px 5px 10px;
+}
+
+.input::placeholder {
+    font-family: Raleway, sans-serif;
+
+    font-size: small;
+    font-weight: 300;
+}
+
+/* Fonts */
+.font-color-1 {
+    color: #292929;
+    /* color: #EEF3EF; */
+}
+
+.font-color-2 {
+    color: #da2912;
 }

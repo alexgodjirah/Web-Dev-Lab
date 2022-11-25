@@ -1,9 +1,6 @@
-/* .project {
-    display: grid;
-    grid-template-areas: 
-        "project"
-    ;
-} */
+.project {
+    padding-top: 5vh;
+}
 
 .project .project__title {
     text-align: center;
