@@ -12,14 +12,17 @@ export default function FirstPage() {
 
                 <div className="name--social_icons name--social_icons-gap-3vw">
                     <img
+                        className="image-resize"
                         src="https://via.placeholder.com/50x50"
                         alt="social-icon"
                     />
                     <img
+                        className="image-resize"
                         src="https://via.placeholder.com/50x50"
                         alt="social-icon"
                     />
                     <img
+                        className="image-resize"
                         src="https://via.placeholder.com/50x50"
                         alt="social-icon"
                     />
@@ -27,16 +30,14 @@ export default function FirstPage() {
             </div>
 
             <div className="first_page--image">
-                <img
-                    className="image--1"
-                    src="https://via.placeholder.com/300x500/292929/969696"
-                    alt="placehoder"
-                />
-                <img
-                    className="image--2"
-                    src="https://via.placeholder.com/200x500/da2912/969696"
-                    alt="placehoder"
-                />
+                <picture>
+                    <source srcSet="" />
+                    <img
+                        className="image--1"
+                        src="https://via.placeholder.com/300x500/292929/969696"
+                        alt="placehoder"
+                    />
+                </picture>
             </div>
 
             <div className="first_page--title">
@@ -64,7 +65,7 @@ export default function FirstPage() {
                             href="#project"
                         >
                             <h4 className="anchor--title font-color-1">
-                                My Project
+                                My Projects
                             </h4>
                         </a>
                     </div>

@@ -3,9 +3,11 @@
     grid-template-areas: 
         "name image title"
     ;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 
-    /* position: static; */
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
 }
 
 /* First Page Name Section */
@@ -18,13 +20,19 @@
     ;
     align-self: center;
 
-    margin-left: 10vw;
+    position: absolute;
+    left: 2%;
+    /* margin-left: 3.5vw; */
+}
+
+@media (min-width: 1920) {
+    
 }
 
 .name--h1 {
     margin: 0 0 2vh 0;
     
-    font-size: 75px;
+    font-size: 5vw;
     font-weight: 700;
 }
 
@@ -39,16 +47,25 @@
     display: flex;
     
     justify-content: flex-start;
+    position: relative;
+    left: .5vw;
 }
 
 .name--social_icons-gap-3vw {
     gap: 3vw;
 }
 
+.image-resize {
+    width: 3vw;
+}
+
 
 /* First Page Image Section */
 .first_page--image {
     display: flex;
+
+    position: absolute;
+    place-self: center;
 }
 
 .image--1 {
@@ -80,7 +97,7 @@
     /* margin-left: 10px; */
 
     position: absolute;
-    right: 10vw;
+    right: 2%;
 }
 
 .title--position {
@@ -93,31 +110,31 @@
     ;
 
     position: relative;
-    bottom: 5vh;
+ 
 }
 
 .position--h1 {
-    font-size: 60px;
+    font-size: 4.5vw;
 
     position: relative;
-    left: 10px;
+    left: .5vw;
 }
 
 .position--h2 {
-    font-size: 30px;
-    letter-spacing: 12px;
+    font-size: 2vw;
+    letter-spacing: .55em;
 
     position: relative;
-    left: 12px;
+    left: .75vw;
 }
 
 .position--h3 {
-    font-size: medium;
+    font-size: 1.2vw;
     font-weight: 500;
-    letter-spacing: 43px;
+    letter-spacing: 2.7em;
 
     position: relative;
-    left: 15px;
+    left: .85vw;
 }
 
 .title--action {
@@ -127,11 +144,11 @@
         "my-project"
     ;
 
-    position: absolute;
+    position: relative;
 
-    top: 35vh;
     /* bottom: 20vh; */
-    right: 1.5vw;
+    top: 20vh;
+    left: 1vw;
 }
 
 .action--anchor {
@@ -145,12 +162,6 @@
 .anchor--decoration--none {
     text-decoration: none;
 }
-
-/* .anchor--title {
-    position: relative;
-
-    left: 10px;
-} */
 
 .anchor--link:hover {
     text-decoration: underline;
