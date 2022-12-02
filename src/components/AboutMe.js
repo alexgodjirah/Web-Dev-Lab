@@ -1,87 +1,59 @@
-import '../styles/aboutMe.css'
-import React from 'react'
+import '../styles/aboutMe.css';
+import React from 'react';
+import TechStack from './TechStack';
 
 export default function AboutMe() {
     return (
-        <div className="about-me">
-            <div className="about-me__summary">
-                <h2 className="summary__title">About Me</h2>
+        <div className="about_me">
+            <div className="about_me--summary">
+                <div className="summary--title">
+                    <h2>About Me</h2>
+                </div>
 
-                <div className="summary__text">
-                    <h3>Hello, I'm Alexander.</h3>
-                    <br />
-                    <p>
-                        Dedicated and passionate full-stack web developer
-                        graduate from Binar Academy with one year of experience
-                        in web development. I'm passionate about creating
-                        mindful and meaningful products using my creativity,
-                        curiosity, and discipline to help me fulfilling my
-                        dreams. Interested in designing and finding harmony in
-                        every web design I create. Looking further to improve my
-                        web development skills.
-                    </p>
-                    <div className="summary__button">
-                        <a>
-                            <button className="button background-color-2">
-                                Resume
-                            </button>
-                        </a>
-                        <a>
-                            <button className="button background-color-2">
-                                My Projects
-                            </button>
-                        </a>
+                <div className="summary--text">
+                    <h3 className="text--title">
+                        Hello, I'm{' '}
+                        <span className="font-color-2">Alexander</span>.
+                    </h3>
+                    <div>
+                        <p className="text--paragraph">
+                            Dedicated and passionate full-stack web developer
+                            graduate from Binar Academy with one year of
+                            experience in web development.
+                        </p>
+
+                        <p className="text--paragraph">
+                            I'm passionate about creating mindful and meaningful
+                            products using my creativity, curiosity, and
+                            discipline
+                        </p>
+
+                        <p className="text--paragraph">
+                            to help me fulfilling my dreams. Interested in
+                            designing and finding harmony in every web design I
+                            create. Looking further to improve my web
+                            development skills as a{' '}
+                            <span className="text-bold font-color-2">
+                                Front-End Developer
+                            </span>
+                            .
+                        </p>
                     </div>
+                </div>
+
+                <div className="summary--button">
+                    <a href=".my-resume">
+                        <button className="button">Resume</button>
+                    </a>
+                    <a href="#my-projects">
+                        <button className="button2">My Projects</button>
+                    </a>
                 </div>
             </div>
 
-            <div className="about-me__skills ">
-                <h2 className="skills__title">Skills</h2>
-                <div className="skills__container">
-                    <div className="skills__container-item">
-                        <h3 className="container-item__title">Front-End</h3>
-                        <ul className="container-item__list">
-                            <li className="container-item__item">HTML</li>
-                            <li className="container-item__item">CSS</li>
-                            <li className="container-item__item">ReactJS</li>
-                            <li className="container-item__item">NextJS</li>
-                            <li className="container-item__item">Vue</li>
-                            <li className="container-item__item">Redux</li>
-                            <li className="container-item__item">
-                                Material UI
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="skills__container-item">
-                        <h3 className="container-item__title">Back-End</h3>
-                        <ul className="container-item__list">
-                            <li className="container-item__item">NodeJS</li>
-                            <li className="container-item__item">ExpressJS</li>
-                            <li className="container-item__item">
-                                Sequelize ORM
-                            </li>
-                            <li className="container-item__item">PostgreSQL</li>
-                        </ul>
-                    </div>
-                    <div className="skills__container-item">
-                        <h3 className="container-item__title">Languages</h3>
-                        <ul className="container-item__list">
-                            <li className="container-item__item">JavaScript</li>
-                            <li className="container-item__item">C#</li>
-                        </ul>
-                    </div>
-                    <div className="skills__container-item">
-                        <h3 className="container-item__title">Tools</h3>
-                        <ul className="container-item__list">
-                            <li className="container-item__item">VS Code</li>
-                            <li className="container-item__item">Postman</li>
-                            <li className="container-item__item">Git</li>
-                            <li className="container-item__item">Bash</li>
-                            <li className="container-item__item">Figma</li>
-                        </ul>
-                    </div>
-                </div>
+            <div className="about_me--tech_stack">
+                <TechStack />
             </div>
         </div>
-    )
+    );
 }

@@ -1,0 +1,116 @@
+.techStack {
+    display: flex;
+    /* grid-template-areas: 
+    "skills-title skills-container"
+    ;
+    
+    grid-template-columns: 3rem 1fr; */
+    
+    width: 95%;
+    justify-self: center;
+}
+
+.techStack--title {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-align: end;
+    rotate: z 180deg;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3rem;
+
+    z-index: 1;
+}
+
+.techStack--container {
+    z-index: 0;
+    
+    display: grid;
+    grid-template-areas: 
+        "front-end back-end languages tools"
+    ;
+    
+    width: 100%;
+    align-items: stretch;
+    justify-self: center;
+
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.container--items {
+    display: grid;
+    grid-template-areas: 
+        "items-title"
+        "items-slider"
+    ;
+
+    grid-template-rows: 3em 1fr;
+    font-size: 1rem;
+    
+    margin: auto 0;
+}
+
+.items--title {
+    text-align: center;
+
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+}
+
+.swiper {
+    font-size: 1.75rem;
+    color: white;
+    
+    width: 12em;
+    max-width: 300px;
+    min-width: 150px;
+    
+    height: 16em;
+    max-height: 400px;
+    min-height: 200px;
+
+    transition: transform 100ms ease-in-out;
+}
+
+.swiper-slide {
+    text-align: center;
+    background-color: #da2912;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper:hover {
+    transform: scale(1.05);
+}
+
+
+/* @media (max-width: 1000px) {
+    .techStack--container {
+        display: grid;
+        grid-template-areas: 
+            "front-end back-end" 
+            "languages tools"
+        ;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        
+        width: 100%;
+        justify-self: center;
+
+        row-gap: 3rem;
+        column-gap: 3rem;
+    }
+
+    .swiper {
+        width: 50%;
+        max-width: 150px;
+        
+        height: 75%;
+        max-height: 200px;
+    }
+} */
