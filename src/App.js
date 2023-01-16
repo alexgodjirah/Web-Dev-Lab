@@ -1,3 +1,4 @@
+import UseContext from "./useContext/UseContext";
 import UseEffect from "./useEffect/UseEffect";
 import UseState from "./useState/UseState";
 
@@ -9,6 +10,10 @@ function App() {
             <br></br>
 
             <UseEffect />
+
+            <br></br>
+
+            <UseContext />
         </div>
     );
 }
