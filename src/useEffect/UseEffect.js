@@ -7,7 +7,7 @@ export default function UseEffect() {
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/${state}`)
             .then((response) => response.json())
-            .then((data) => setItems(data))
+            .then((data) => console.log(data))
             .catch((error) => console.error(error));
     }, [state]);
 
@@ -23,9 +23,11 @@ export default function UseEffect() {
             <Button>comments</Button>
             <Button>todos</Button>
 
-            {items.map((item, idx) => (
+            <h1>Open in the console</h1>
+
+            {/* {items.map((item, idx) => (
                 <p key={idx}>{JSON.stringify(item)}</p>
-            ))}
+            ))} */}
         </div>
     );
 }
