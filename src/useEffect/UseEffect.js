@@ -23,7 +23,7 @@ export default function UseEffect() {
             <Button>comments</Button>
             <Button>todos</Button>
 
-            <h1>Open in the console</h1>
+            <h4>Open in the console</h4>
 
             {/* {items.map((item, idx) => (
                 <p key={idx}>{JSON.stringify(item)}</p>
