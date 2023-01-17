@@ -1,13 +1,13 @@
 import React from "react";
 import List from "./List";
 
-export const ACTIONS = {
+/* 1 */ export const ACTIONS = {
     ADD_TODO: "add-todo",
     TOGGLE_TODO: "toggle-todo",
     DELETE_TODO: "delete-todo",
 };
 
-function reducer(todos, action) {
+/* 3 */ function reducer(todos, action) {
     switch (action.type) {
         case ACTIONS.ADD_TODO:
             return [...todos, newTodo(action.payload.name)];
@@ -20,16 +20,18 @@ function reducer(todos, action) {
             });
         case ACTIONS.DELETE_TODO:
             return todos.filter((todo) => todo.id !== action.payload.id);
+        default:
+            return todos;
     }
 }
 
-function newTodo(name) {
+/* 4 */ function newTodo(name) {
     return { id: Date.now(), name: name, complete: false };
 }
 
 export default function Todos() {
     const [name, setName] = React.useState("");
-    /* 1 */ const [todos, dispatch] = React.useReducer(reducer, []);
+    /* 2 */ const [todos, dispatch] = React.useReducer(reducer, []);
 
     console.log(todos);
 

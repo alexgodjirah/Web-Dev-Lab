@@ -6,11 +6,12 @@ import Todos from "./useReducer/Todos";
 import UserReducer from "./useReducer/UserReducer";
 import UseRef from "./useRef/UseRef";
 import UseState from "./useState/UseState";
+import UseTransition from "./useTransition/UseTransition";
 
 function App() {
     return (
         <div className="App">
-            {/* <h1>useState</h1>
+            <h1>useState</h1>
             <UseState />
 
             <br></br>
@@ -36,13 +37,16 @@ function App() {
             <br></br>
 
             <h1>useCallback</h1>
-            <UseCallback /> */}
+            <UseCallback />
 
             <br></br>
 
             <h1>useReducer</h1>
             <UserReducer />
             <Todos />
+
+            <h1>UseTransition</h1>
+            <UseTransition />
         </div>
     );
 }
