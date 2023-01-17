@@ -3,6 +3,7 @@ import React from "react";
 export default function UseState() {
     const [name, setName] = React.useState("");
     const [count, setCount] = React.useState(() => {
+        // useState can accept function as the argument, and this function will only be run the very first time a component is rendered. This will make useState no longer run the slow computation each render, but only the first render of the component just like class component.
         return 10;
     });
     const [object, setObject] = React.useState({

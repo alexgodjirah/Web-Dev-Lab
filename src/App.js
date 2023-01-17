@@ -1,3 +1,4 @@
+import UseCallback from "./useCallback/UseCallback";
 import UseContext from "./useContext/UseContext";
 import UseEffect from "./useEffect/UseEffect";
 import UseMemo from "./useMemo/UseMemo";
@@ -29,6 +30,11 @@ function App() {
 
             <h1>useMemo</h1>
             <UseMemo />
+
+            <br></br>
+
+            <h1>useCallback</h1>
+            <UseCallback />
         </div>
     );
 }

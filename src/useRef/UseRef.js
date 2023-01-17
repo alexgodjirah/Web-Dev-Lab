@@ -17,7 +17,7 @@ export default function UseRef() {
     }
 
     function inputFocus() {
-        inputRef.current.focus();
+        inputRef.current.focus(); // Referencing the input to make the input focus. Don't forget to put the ref attribute to the selected input.
     }
 
     return (
