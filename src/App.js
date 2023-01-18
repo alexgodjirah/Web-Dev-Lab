@@ -2,6 +2,7 @@ import UseCallback from "./useCallback/UseCallback";
 import UseContext from "./useContext/UseContext";
 import UseDeferredValue from "./useDeferredValue/UseDeferredValue";
 import UseEffect from "./useEffect/UseEffect";
+import UseImperativeHandle from "./useImperativeHandle/UseImperativeHandle";
 import UseLayoutEffect from "./useLayoutEffect/UseLayoutEffect";
 import UseMemo from "./useMemo/UseMemo";
 import Todos from "./useReducer/Todos";
@@ -55,6 +56,9 @@ function App() {
 
             <h1>useLayoutEffect</h1>
             <UseLayoutEffect />
+
+            <h1>useImperativeHandle</h1>
+            <UseImperativeHandle />
         </div>
     );
 }

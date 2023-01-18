@@ -1,0 +1,6 @@
+.modal-close:focus,
+.confirm-btn:focus,
+.deny-btn:focus {
+    background-color: black;
+    color: white;
+}
