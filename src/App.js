@@ -2,6 +2,7 @@ import UseCallback from "./useCallback/UseCallback";
 import UseContext from "./useContext/UseContext";
 import UseDeferredValue from "./useDeferredValue/UseDeferredValue";
 import UseEffect from "./useEffect/UseEffect";
+import UseLayoutEffect from "./useLayoutEffect/UseLayoutEffect";
 import UseMemo from "./useMemo/UseMemo";
 import Todos from "./useReducer/Todos";
 import UserReducer from "./useReducer/UserReducer";
@@ -51,6 +52,9 @@ function App() {
 
             <h1>useDeferredValue</h1>
             <UseDeferredValue />
+
+            <h1>useLayoutEffect</h1>
+            <UseLayoutEffect />
         </div>
     );
 }
