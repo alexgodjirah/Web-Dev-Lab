@@ -1,3 +1,4 @@
+import CustomHooksComponent from "./CustomHooks/CustomHooksComponent";
 import UseCallback from "./useCallback/UseCallback";
 import UseContext from "./useContext/UseContext";
 import UseDeferredValue from "./useDeferredValue/UseDeferredValue";
@@ -15,65 +16,73 @@ import UseTransition from "./useTransition/UseTransition";
 function App() {
     return (
         <div className="App">
-            <h1>useState</h1>
-            <UseState />
+            {/* React Hooks */}
+            <div>
+                {/* <h1>useState</h1>
+                <UseState />
 
-            <br></br>
+                <br></br>
 
-            <h1>useEffect</h1>
-            <UseEffect />
+                <h1>useEffect</h1>
+                <UseEffect />
 
-            <br></br>
+                <br></br>
 
-            <h1>useContext</h1>
-            <UseContext />
+                <h1>useContext</h1>
+                <UseContext />
 
-            <br></br>
+                <br></br>
 
-            <h1>useRef</h1>
-            <UseRef />
+                <h1>useRef</h1>
+                <UseRef />
 
-            <br></br>
+                <br></br>
 
-            <h1>useMemo</h1>
-            <UseMemo />
+                <h1>useMemo</h1>
+                <UseMemo />
 
-            <br></br>
+                <br></br>
 
-            <h1>useCallback</h1>
-            <UseCallback />
+                <h1>useCallback</h1>
+                <UseCallback />
 
-            <br></br>
+                <br></br>
 
-            <h1>useReducer</h1>
-            <UserReducer />
-            <Todos />
+                <h1>useReducer</h1>
+                <UserReducer />
+                <Todos />
 
-            <br></br>
+                <br></br>
 
-            <h1>iseTransition</h1>
-            <UseTransition />
+                <h1>iseTransition</h1>
+                <UseTransition />
 
-            <br></br>
+                <br></br>
 
-            <h1>useDeferredValue</h1>
-            <UseDeferredValue />
+                <h1>useDeferredValue</h1>
+                <UseDeferredValue />
 
-            <br></br>
+                <br></br>
 
-            <h1>useLayoutEffect</h1>
-            <UseLayoutEffect />
+                <h1>useLayoutEffect</h1>
+                <UseLayoutEffect />
 
-            <br></br>
+                <br></br>
 
-            <h1>useImperativeHandle</h1>
-            <UseImperativeHandle />
+                <h1>useImperativeHandle</h1>
+                <UseImperativeHandle />
 
-            <br></br>
+                <br></br>
 
-            <h1>useId</h1>
-            <UseId />
-            <UseId />
+                <h1>useId</h1>
+                <UseId />
+                <UseId /> */}
+            </div>
+
+            {/* Custom Hooks */}
+            <div>
+                <CustomHooksComponent />
+            </div>
         </div>
     );
 }
