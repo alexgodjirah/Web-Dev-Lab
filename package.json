@@ -1,0 +1,36 @@
+{
+    "name": "web-dev-lab",
+    "version": "1.0.0",
+    "description": "This repo will be used as lab for my Web Dev porfolio",
+    "main": "index.js",
+    "scripts": {
+        "test": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alexgodjirah/Web-Dev-Lab.git"
+    },
+    "prettier": {
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": true,
+        "singleQuote": false,
+        "spa": "css",
+        "bracketSpacing": true,
+        "bracketSameLine": false
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/alexgodjirah/Web-Dev-Lab/issues"
+    },
+    "homepage": "https://github.com/alexgodjirah/Web-Dev-Lab#readme",
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "pg": "^8.8.0",
+        "pg-hstore": "^2.3.4",
+        "sequelize": "^6.28.0"
+    }
+}
